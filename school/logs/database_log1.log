@@ -1,0 +1,86 @@
+5/8/2023, 13:10:25 IST - [READ] - Read data for email: example3@example.com
+5/8/2023, 13:11:42 IST - [FOUND] - School data already present for email: example1@example.com
+5/8/2023, 13:13:46 IST - [DELETE] - School Data is deleted for id: 5648951047
+5/8/2023, 13:13:56 IST - [FOUND] - School data already present for email: example1@example.com
+5/8/2023, 13:14:18 IST - [FOUND] - School data already present for email: example1@example.com
+5/8/2023, 13:14:29 IST - [INSERT] - School Data is inserted for email: example2@example.com
+5/8/2023, 13:14:48 IST - [READ] - Read data for email: example3@example.com
+5/8/2023, 13:15:00 IST - [ERROR] - Error updating data for id: 2424614454
+5/8/2023, 13:29:17 IST - [READ] - Read data for email: example3@example.com
+5/8/2023, 13:36:19 IST - [READ] - Read data for email: example3@example.com
+5/8/2023, 13:36:24 IST - [FOUND] - School data already present for email: example2@example.com
+5/8/2023, 13:36:33 IST - [ERROR] - Error updating data for id: 2424614454
+5/8/2023, 13:36:48 IST - [DELETE] - School Data is deleted for id: 5648951047
+5/8/2023, 13:37:10 IST - [DELETE] - School Data is deleted for id: 5648951047
+5/8/2023, 13:38:51 IST - [DELETE] - School Data is deleted for id: 5648951047
+5/8/2023, 13:38:58 IST - [READ] - Read data for email: example3@example.com
+5/8/2023, 13:39:01 IST - [FOUND] - School data already present for email: example2@example.com
+5/8/2023, 14:40:30 IST - [ERROR] - Error detected for email: example34@example.com
+5/8/2023, 14:42:05 IST - [INSERT] - School Data is inserted for email: example34@example.com
+5/8/2023, 15:03:47 IST - [DELETE] - School Data is deleted for id: 5648951047
+5/8/2023, 15:05:40 IST - [EMPTY] - School Data not found for id: 5648951047
+5/8/2023, 15:38:06 IST - [EMPTY] - School Data not found for id: 5648951047
+5/8/2023, 16:01:38 IST - [READ] - Read data for email: example3@example.com
+5/8/2023, 16:03:50 IST - [READ] - Read data for email: example3@example.com
+5/8/2023, 16:11:18 IST - [READ] - Read data for email: example3@example.com
+5/8/2023, 16:36:06 IST - [READ] - Read data for email: example3@example.com
+5/8/2023, 16:38:47 IST - [READ] - Read data for email: example3@example.com
+5/8/2023, 16:47:11 IST - [READ] - Read data for email: example3@example.com
+5/8/2023, 16:52:16 IST - [READ] - Read data for email: example3@example.com
+5/8/2023, 16:52:54 IST - [FOUND] - School data already present for email: example34@example.com
+5/8/2023, 17:29:25 IST - [FOUND] - School data already present for email: example34@example.com
+6/8/2023, 11:25:32 IST - [READ] - Read data for email: example3@example.com
+6/8/2023, 11:26:46 IST - [READ] - Read data for email: example3@example.com
+6/8/2023, 11:38:23 IST - [READ] - Read data for email: example3@example.com
+6/8/2023, 11:50:42 IST - [READ] - Read data for email: example3@example.com
+6/8/2023, 12:17:05 IST - [READ] - Read data for email: example3@example.com
+6/8/2023, 15:02:49 IST - [EMPTY] - School not found for email: example3@example.com 
+6/8/2023, 15:03:32 IST - [EMPTY] - School not found for email: example3@example.com 
+6/8/2023, 15:18:11 IST - [READ] - Read data for email: example3@example.com
+6/8/2023, 15:56:52 IST - [READ] - Read data for email: example3@example.com
+6/8/2023, 15:57:39 IST - [FOUND] - School data already present for email: example34@example.com
+6/8/2023, 17:02:06 IST - [READ] - Read data for email: example3@example.com
+6/8/2023, 17:48:57 IST - [ERROR] - Error detected for className: 1
+6/8/2023, 17:49:44 IST - [ERROR] - Error detected for className: 1
+6/8/2023, 17:50:12 IST - [ERROR] - Error detected for className: 1
+6/8/2023, 17:53:05 IST - [ERROR] - Error detected for className: 1
+6/8/2023, 17:53:23 IST - [INSERT] - Class Data is inserted for className: 1
+7/8/2023, 12:34:34 IST - [FOUND] - Class data already present for class name: 1
+7/8/2023, 12:56:42 IST - [FOUND] - Class data already present for class name: 1
+7/8/2023, 12:57:08 IST - [ERROR] - Error detected for className: 1
+7/8/2023, 12:58:23 IST - [FOUND] - Class data already present for class name: 1
+7/8/2023, 12:58:39 IST - [INSERT] - Class Data is inserted for className: 1
+7/8/2023, 12:59:01 IST - [INSERT] - Class Data is inserted for className: 2
+7/8/2023, 13:01:16 IST - [INSERT] - Class Data is inserted for className: 2
+7/8/2023, 13:01:22 IST - [FOUND] - Class data already present for class name: 2
+
+7/8/2023, 15:26:31 IST - [READ] - Read data for id: 8872905780
+7/8/2023, 15:26:47 IST - [READ] - Read data for id: 8872905780
+7/8/2023, 15:31:13 IST - [ERROR] - Error detected for id: 8815692288
+7/8/2023, 15:32:11 IST - [READ] - Read data for id: 8815692288
+8/8/2023, 14:38:37 IST - [READ] - Read data for id: 8815692288
+15/8/2023, 12:04:41 IST - [INSERT] - School Data is inserted for email: manishkumar620350@gmail.com
+15/8/2023, 12:07:36 IST - [INSERT] - School Data is inserted for email: manishkumar620350@gmail.com
+15/8/2023, 12:23:18 IST - [INSERT] - School Data is inserted for email: manishkumar620350@gmail.com
+15/8/2023, 12:26:52 IST - [INSERT] - School Data is inserted for email: manishkumar620350@gmail.com
+15/8/2023, 12:39:35 IST - [INSERT] - School Data is inserted for email: manishkumar620350@gmail.com
+15/8/2023, 12:51:09 IST - [INSERT] - School Data is inserted for email: manishkumar620350@gmail.com
+15/8/2023, 12:54:23 IST - [INSERT] - School Data is inserted for email: manishkumar620350@gmail.com
+15/8/2023, 12:56:00 IST - [INSERT] - School Data is inserted for email: manishkumar620350@gmail.com
+15/8/2023, 20:56:05 IST - [ERROR] - Error detected for email: undefined
+15/8/2023, 22:29:50 IST - [INSERT] - School Data is inserted for email: kriti@gmail.com
+16/8/2023, 10:19:19 IST - [FOUND] - School data already present for email: kriti@gmail.com
+16/8/2023, 10:22:15 IST - [FOUND] - School data already present for email: kriti@gmail.com
+16/8/2023, 10:24:09 IST - [FOUND] - School data already present for email: kriti@gmail.com
+16/8/2023, 10:28:27 IST - [FOUND] - School data already present for email: kriti@gmail.com
+16/8/2023, 10:29:40 IST - [FOUND] - School data already present for email: kriti@gmail.com
+16/8/2023, 10:31:08 IST - [FOUND] - School data already present for email: kriti@gmail.com
+16/8/2023, 10:35:40 IST - [FOUND] - School data already present for email: kriti@gmail.com
+16/8/2023, 10:41:19 IST - [FOUND] - School data already present for email: kriti@gmail.com
+16/8/2023, 11:04:28 IST - [INSERT] - School Data is inserted for email: kriti@gmail.com
+16/8/2023, 11:05:41 IST - [INSERT] - School Data is inserted for email: kriti@gmail.com
+16/8/2023, 11:07:36 IST - [INSERT] - School Data is inserted for email: kriti@gmail.com
+16/8/2023, 13:07:51 IST - [ERROR] - Error detected for email: undefined
+16/8/2023, 13:51:31 IST - [INSERT] - School Data is inserted for email: kriti@gmail.com
+16/8/2023, 13:52:45 IST - [INSERT] - School Data is inserted for email: kriti@gmail.com
+16/8/2023, 13:54:16 IST - [INSERT] - School Data is inserted for email: kriti@gmail.com

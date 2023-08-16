@@ -1,0 +1,23 @@
+{
+    "routers": {
+        "get":"/",
+        "post":"/register",
+        "put": "/update",
+        "delete":"/delete",
+        "verify":"/verify"
+    },
+    "collectionName":{
+        "school": "school",
+        "class": "class"
+    },
+    "color":{
+        "read": "blue",
+        "write": "green",
+        "update": "yellow",
+        "delete": "magenta",
+        "error": "red",
+        "empty": "gray",
+        "found": "cyan"
+    },
+    "numberOfRounds": 10 
+}

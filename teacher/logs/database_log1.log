@@ -1,0 +1,3 @@
+8/8/2023, 16:02:50 IST - [ERROR] - Error detected for email: teacher@example.com
+8/8/2023, 16:03:28 IST - [INSERT] - Teacher Data is inserted for email: teacher@example.com
+8/8/2023, 16:05:53 IST - [FOUND] - Teacher data already present for email: teacher@example.com
