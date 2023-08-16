@@ -10,9 +10,9 @@ app.use(urlPathandSecurity.contentSecurity);
 app.use(urlPathandSecurity.typeSecurityGroup);
 
 const proxies = [
-  { path: "/school",  target: `${urlPathandSecurity.path}${urlPathandSecurity.port.school}`, name:"school"},
-  { path: "/teacher", target: `${urlPathandSecurity.path}${urlPathandSecurity.port.teacher}`, name:"teacher"},
-  { path: "/student", target: `${urlPathandSecurity.path}${urlPathandSecurity.port.student}`, name:"student"},
+  { path: "/school",  target: `${urlPathandSecurity.deployePath.school}`, name:"school"},
+  // { path: "/teacher", target: `${urlPathandSecurity.path}${urlPathandSecurity.port.teacher}`, name:"teacher"},
+  // { path: "/student", target: `${urlPathandSecurity.path}${urlPathandSecurity.port.student}`, name:"student"},
 ];
 
 proxies.forEach((proxyConfig) => {
