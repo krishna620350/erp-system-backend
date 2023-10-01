@@ -11,8 +11,13 @@ jobs:
                 node-version: '20.x'
             - name: Display current directory
               run: pwd
-            - name: go to ./gateway dir
-              run: cd ./gateway
+            - name: Display contents of ./gateway before and after cd
+              run: |
+                echo "Contents of ./gateway before cd:"
+                ls -al ./gateway
+                cd ./gateway
+                echo "Contents of ./gateway after cd:"
+                ls -al
             - name: Display current directory
               run: pwd
             - name: List contents of current directory
