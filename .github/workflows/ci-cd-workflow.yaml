@@ -15,7 +15,13 @@ jobs:
               run: pwd
             
             - name: Go to ./gateway dir and print current directory after cd
-              run: cd ./erp-system-backend/gateway && pwd
+              run: cd ./gateway && pwd
+
+            - name: Display current directory after cd
+              run: pwd
+              
+            - name: List contents of ./gateway after cd
+              run: ls -al
             
             - name: Install dependencies
               run: npm install
