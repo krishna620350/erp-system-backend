@@ -11,20 +11,25 @@ jobs:
                 node-version: '20.x'
             - name: Display current directory
               run: pwd
-            - name: Display contents of ./gateway before and after cd
-              run: |
-                echo "Contents of ./gateway before cd:"
-                ls -al ./gateway
-                cd ./gateway
-                echo "Contents of ./gateway after cd:"
-                ls -al
-            - name: Display current directory
+            - name: Print current directory before cd
               run: pwd
-            - name: List contents of current directory
-              run: ls -al
-            - name: List contents of parent directory
-              run: ls -al ..
-            - name: Install dependencies
-              run: npm install
-            - name: create build
-              run: npm run build --if-present
+            
+            - name: Go to ./gateway dir and print current directory after cd
+              run: cd ./gateway && pwd
+            
+            - name: Go to parent directory
+              run: cd ..
+            
+            - name: Go to ./gateway dir and print current directory after cd
+              run: cd ./gateway && pwd
+            
+            # - name: Display current directory
+            #   run: pwd
+            # - name: List contents of current directory
+            #   run: ls -al
+            # - name: List contents of parent directory
+            #   run: ls -al ..
+            # - name: Install dependencies
+            #   run: npm install
+            # - name: create build
+            #   run: npm run build --if-present
