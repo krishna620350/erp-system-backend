@@ -1,4 +1,4 @@
-import data from "../json/data.json" assert {type: "json"};
+import {data} from "../json/filejson.cjs";
 import { teacherObject } from "../controllers/controllerTeacher.js";
 
 export const fileObject = {

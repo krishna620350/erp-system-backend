@@ -52,18 +52,18 @@ class smtpEmail {
     verifyMail = async (email, code) => {
         try {
             const emailQuerySnapshot = await getDocs(query(this.schoolConfiguration, where("email", "==", email), where("activity.code", "==", code)));
-
+            let id = null;
             if (!emailQuerySnapshot.empty) {
                 const updatePromises = emailQuerySnapshot.docs.map(async (queryDocSnapshot) => {
-                    const docRef = doc(this.schoolConfiguration, queryDocSnapshot.id);
+                    id = queryDocSnapshot.id;
+                    const docRef = doc(this.schoolConfiguration, id);
                     await updateDoc(docRef, { "activity.status": true });
                 });
 
                 await Promise.all(updatePromises); // Wait for all updates to finish
-                return true;
+                return { id, success: true};
             } else {
-                console.log("No document found with the email and code:", email, code);
-                return false;
+                return { id, success: false };
             }
         } catch (error) {
             console.error("Error retrieving or updating document:", error);

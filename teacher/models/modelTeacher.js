@@ -1,20 +1,18 @@
 export const validateBasicTeacherData = (data) => {
     const requiredFields = [
-        { field: "firstName", type: "string" },
-        { field: "lastName", type: "string" },
+        { field: "name", type: "string" },
+        { field: "dateOfBirth", type: "string", regex: /^\d{4}-\d{2}-\d{2}$/ },
+        {
+            field: "emailId",
+            type: "string",
+            regex: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+        },
+        { field: "phoneNumber", type: "string", regex: /^\d{10}$/ },
         {
             field: "gender",
             type: "string",
             validValues: ["male", "female", "other"],
         },
-        { field: "dateOfBirth", type: "string", regex: /^\d{4}-\d{2}-\d{2}$/ },
-        {
-            field: "email",
-            type: "string",
-            regex: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-        },
-        { field: "phoneNumber", type: "string", regex: /^\d{10}$/ },
-        { field: "password", type: "string" },
     ];
 
     const errors = [];

@@ -7,22 +7,23 @@ class controllerSchool {
 
     findSchool = async (req, res) => {
         try {
-            const data = req.body;
+            const data = req.query;
             const dataFind = await dataFile.schoolObject.readData(data);
             if (!dataFind) {
-                return res.status(404).json({ message: "School not found." });
+                return res.status(403).json({ message: "School not found.", success: false });
             }
-
-            const id = Object.keys(dataFind)[0]; // Get the first (and only) ID
-            const comparePassword = await bcrypt.compare(data.password, dataFind[id].password);
+            const comparePassword = await bcrypt.compare(data.password, dataFind.data.password);
             if (!comparePassword) {
-                return res.status(401).json({ message: "Invalid credentials." });
+                return res.status(403).json({ message: "Invalid credentials.", success: false });
             }
-
-            res.status(200).json(dataFind); // Send the data with the same ID as the key
+            const value = {
+                ...dataFind,
+                data: { ...dataFind.data, password: null }
+            };
+            res.status(200).json({ message: value, success: true }); // Send the data with the same ID as the key
         } catch (error) {
             console.error("Error during login:", error);
-            res.status(500).json({ message: "Internal server error." });
+            res.status(500).json({ message: "Internal server error.", success: false });
         }
     };
 
@@ -113,10 +114,10 @@ class controllerSchool {
             const data = req.body;
             const isSuccess = await dataFile.sendMail.verifyMail(data.email, data.code);
 
-            if (isSuccess) {
-                res.status(404).json({ message: true });
+            if (isSuccess.success) {
+                res.status(200).json({ message: "verification successful", success: isSuccess });
             } else {
-                res.status(404).json({ message: false });
+                res.status(403).json({ message: "verification code is incorrect", success: isSuccess });
             }
         } catch (err) { 
             console.error(err);

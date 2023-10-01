@@ -11,17 +11,21 @@ class dataSchool {
     readData = async (data) => {
         const timestamp = dataFile.timeStamp();
         try {
-            let dataFind = {};
+            let dataFind = {
+                id: '',
+                data: ''
+            };
             const docs = await getDocs(query(this.schoolCollectionRef, where("email", "==", data.email)));
             if (docs.empty) { 
                 dataFile.logFile.writeLog(`${timestamp} - [EMPTY] - School not found for email: ${data.email} `, dataFile.color.empty);
                 return false;
             }
             docs.forEach(doc => {
-                dataFind[doc.id] = doc.data();
+                if (doc.id) dataFind.id = doc.id;
+                dataFind.data = doc.data();
             });
-            set(ref(database, `${dataFile.school}Login/${Object.keys(dataFind)[0]}`), {
-                email: dataFind[Object.keys(dataFind)[0]].email,
+            set(ref(database, `${dataFile.school}Login/${dataFind.id}`), {
+                email: dataFind.data.email,
                 timestamp: {
                     startAt: timestamp,
                     endAt: "00:00:00"

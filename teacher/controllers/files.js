@@ -1,6 +1,6 @@
 import { validateBasicTeacherData } from "../models/modelTeacher.js";
 import { dataObject } from "../database/dataTeacher.js";
-import data from "../json/data.json" assert {type: "json"};
+import {data} from "../json/filejson.cjs";
 import bcrypt from "bcrypt";
 
 

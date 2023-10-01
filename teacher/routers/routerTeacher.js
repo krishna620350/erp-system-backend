@@ -3,7 +3,9 @@ import { fileObject } from "./files.js";
 
 const routerTeacher = new Router();
 
-routerTeacher.get(fileObject.routers.get, fileObject.teacherObject.readData);
+routerTeacher.get(fileObject.routers.get, fileObject.teacherObject.findData);
+
+routerTeacher.get(`${fileObject.routers.get}all`, fileObject.teacherObject.readData);
 
 routerTeacher.post(fileObject.routers.post, fileObject.teacherObject.addData);
 
