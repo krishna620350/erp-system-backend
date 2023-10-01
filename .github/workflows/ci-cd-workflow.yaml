@@ -1,30 +1,19 @@
 name: Node.js CI
 on: [push]
 jobs:
-    build:
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v4
-            - name: Use Node.js
-              uses: actions/setup-node@v3
-              with: 
-                node-version: '20.x'
-            - name: Display current directory
-              run: pwd
-            - name: Print current directory before cd
-              run: pwd
-            
-            - name: Go to ./gateway dir and print current directory after cd
-              run: cd ./gateway && pwd
-
-            - name: Display current directory after cd
-              run: pwd
-              
-            - name: List contents of ./gateway after cd
-              run: ls -al
-            
-            - name: Install dependencies
-              run: npm install
-              
-            - name: create build
-              run: npm run build --if-present
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.x'
+      - name: Display current directory
+        run: ./gateway/pwd
+      - name: List contents of current directory
+        run: ./gateway/ls -al
+      - name: Install dependencies
+        run: ./gateway/npm install
+      - name: Create build
+        run: ./gateway/npm run build --if-present
