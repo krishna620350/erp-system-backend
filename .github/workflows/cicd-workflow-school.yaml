@@ -1,0 +1,29 @@
+name: CICD
+
+on:
+    push:
+        branches: [master]
+
+jobs:
+    build:
+        runs-on: [ubuntu-latest]
+        steps:
+            - name: Checkout source
+              uses: actions/checkout@v3
+            - name: Login to docker hub
+              run: cd ./school && docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+            - name: Build docker image
+              run: cd ./school && docker build -t erpsystem/school .
+            - name: Publish docker image
+              run: cd ./school && docker push -t erpsystem/school:latest
+
+    deploy:
+        needs: build
+        runs-on: [ip-172-31-81-10]
+        steps:
+            - name: Pull umage from docker hub
+              run: cd ./school && docker pull erpsystem/school:latest
+            - name: Delete old container
+              run: cd ./school && docker rm -f school-container
+            - name: Run docker container
+              run: cd ./school && docker run -d -p 8001:8001 --name school-container erpsystem/school
