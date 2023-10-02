@@ -13,17 +13,17 @@ jobs:
             - name: Login to docker hub
               run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
             - name: Build docker image
-              run: cd ./school && docker build -t erpsystem/school .
+              run: cd ./school && docker build -t ${{ secrets.DOCKER_USERNAME }}/school .
             - name: Publish docker image to hub
-              run: docker push erpsystem/school:latest
+              run: docker push ${{ secrets.DOCKER_USERNAME }}/school:latest
 
     deploy:
         needs: build
         runs-on: [ip-172-31-81-10]
         steps:
             - name: Pull umage from docker hub
-              run: docker pull erpsystem/school:latest
+              run: docker pull ${{ secrets.DOCKER_USERNAME }}/school:latest
             - name: Delete old container
               run: docker rm -f school-container
             - name: Run docker container
-              run: docker run -d -p 8001:8001 --name school-container erpsystem/school
+              run: docker run -d -p 8001:8001 --name school-container ${{ secrets.DOCKER_USERNAME }}/school
