@@ -15,7 +15,7 @@ jobs:
             - name: Build docker image
               run: cd ./school && docker build -t erpsystem/school .
             - name: Publish docker image
-              run: cd ./school && docker push -t erpsystem/school:latest
+              run: cd ./school && docker push erpsystem/school:latest
 
     deploy:
         needs: build
