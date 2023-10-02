@@ -19,9 +19,9 @@ jobs:
 
     deploy:
         needs: build
-        runs-on: [ip-172-31-81-10]
+        runs-on: [self-hosted, ip-172-31-81-10]
         steps:
-            - name: Pull umage from docker hub
+            - name: Pull image from docker hub
               run: docker pull ${{ secrets.DOCKER_USERNAME }}/school:latest
             - name: Delete old container
               run: docker rm -f school-container
